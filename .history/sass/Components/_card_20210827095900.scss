@@ -1,0 +1,76 @@
+.card {
+    position: relative;
+    perspective: 150rem;
+    height: 45rem;
+    &__side {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        color: white;
+        font-size: 2rem;
+        height: 45rem;
+        transition: all 2s ease;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        border-radius: 5rem;
+        overflow: hidden;
+        &--front {
+            background-color: $color-white;
+        }
+        &--back {
+            background-color: green;
+            transform: rotateY(180deg);
+        }
+        
+    }
+    &__picture {
+        background-size: cover;
+        background-blend-mode: screen;
+        height: 23rem;
+        clip-path: ellipse(80% 70% at 50% 30%);
+        position: relative;
+        // height: 43rem;
+        &--1 {
+            // background-image: linear-gradient(to right bottom, 
+            // $color-secondary-light,
+            // $color-secondary-dark),
+            //   url(https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+            background-image: linear-gradient(to right, 
+            $color-secondary-light,
+            $color-secondary-dark),
+            url(https://images.unsplash.com/photo-1513258496099-48168024aec0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+        }
+    }
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 12rem;
+        width: 75%;
+        &-span {
+            &--1 {
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, rgba($light-blue, .85), rgba($dark-blue, .85));
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+            }
+        }
+    }
+    
+    
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}

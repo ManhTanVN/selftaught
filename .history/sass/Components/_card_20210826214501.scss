@@ -1,0 +1,22 @@
+.card {
+    &__side {
+        color: white;
+        font-size: 2rem;
+        height: 45rem;
+        transition: all 8s ease;
+        &--front {
+            background-color: orangered;
+        }
+        &--back {
+            background-color: green;
+            transform: rotate(180);
+        }
+
+    }
+    &:hover &__side--front {
+        transform: rotateY(-180);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+    --light-blue: #8e9efc;
+    --medium-blue: #5a73fc;
+    --dark-blue: #1a3cff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:#777777;
+}
+
+header {
+    background-image: linear-gradient(to right bottom, rgba(var(--light-blue), 0.8), rgba(var(--dark-blue), 0.8)), url("https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80");
+}

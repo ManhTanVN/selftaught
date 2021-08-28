@@ -1,0 +1,10 @@
+.row {
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+    max-width: $grid-width;
+    margin: 0 auto;
+    background-color: $light-blue;
+    display: flex;
+    flex-wrap: wrap;
+}

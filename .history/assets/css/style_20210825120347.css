@@ -1,0 +1,108 @@
+
+
+header {
+    background-image:linear-gradient(to right bottom, rgba(141, 157, 252, 0.8), rgba(26, 60, 255, 0.8)),
+    url(/assets/img/header-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 95vh;
+    -webkit-clip-path:  ellipse(99% 75% at 50% 10%);
+    clip-path: ellipse(99% 75% at 50% 10%);
+}
+
+
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.logo{
+    height: 70px;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary{
+    color: #fff;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+.heading-primary_main{
+    display: block;
+    font-size: 6.2rem;
+    font-weight: 400;
+    letter-spacing: 15px;
+    animation: moveInLeft 1s ease-in;
+}
+.heading-primary_sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 18px;
+    animation: moveInRight 1s ease-in;
+
+}
+.btn,
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 15px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+.btn-white{
+background-color: #fff;
+color: #777;
+}
+
+.btn-animated{
+    animation: moveInBottom 1s ease-in 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rbga(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rbga(0,0,0,.2);
+    outline: none;
+}
+
+.btn::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all, .3s;
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    box-shadow: 0 5px 20px rbga(0,0,0,.2);
+    opacity: 0;
+}
+
+
+
+
+/* <element> {
+    animation: <aninmation-name> <aninmation-duration> <aninmation-timing function> <aninmation-delay> <aninmation-interation-count > <animation-direction> <fill-mode>
+
+} */

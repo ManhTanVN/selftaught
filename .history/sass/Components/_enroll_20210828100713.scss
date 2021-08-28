@@ -1,0 +1,28 @@
+.enroll {
+    @include respond (tab-land) {
+        background-image: 
+        radial-gradient(150% 200% ellipse at -15%,
+        rgba($color-white, .8) 0%,
+        rgba($color-white, .8) 65%,
+        transparent 35%),
+        url(https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80)
+        ;
+    }
+    @include respond (tab-port) {
+        background-image: 
+        linear-gradient(to right, )
+        // url(https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80)
+        // ;
+    }
+
+    background-image: radial-gradient( 150% 200% ellipse at -15%, rgba($color-white,.8) 50%, transparent 50%), url(https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80);
+
+    background-size: cover;
+    box-shadow: 0 1.5rem 4rem rgba($color-black,.2);
+    border-radius: 5rem;
+    height: 50rem;
+
+    &__form {
+        padding: 6rem;
+    }
+}

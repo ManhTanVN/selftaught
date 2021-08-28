@@ -1,0 +1,11 @@
+.composition {
+    position: relative;
+    &__photo {
+        width: 50%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: .4);
+        border-radius: .2rem;
+        position: absolute;
+        z-index: 1;
+    }
+}
+

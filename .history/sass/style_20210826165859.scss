@@ -1,0 +1,45 @@
+@import './Abstracts/variable';
+@import './sass/Base/animation';
+@import './sass/Base/base';
+@import './Base/typography';
+@import './Components/buttons';
+
+
+
+.header {
+  background-image: linear-gradient(to right bottom, rgba($light-blue, 0.8), rgba($dark-blue, 0.8)), url(/assets/img/header-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 95vh;
+  -webkit-clip-path: ellipse(99% 75% at 50% 10%);
+  clip-path: ellipse(99% 75% at 50% 10%);
+  &__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  
+  &__logo {
+    height: 70px;
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* <element> {
+    animation: <aninmation-name> <aninmation-duration> <aninmation-timing function> <aninmation-delay> <aninmation-interation-count > <animation-direction> <fill-mode>
+
+} */
+
+

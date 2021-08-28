@@ -1,0 +1,84 @@
+.btn {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 1.6rem;
+      padding: 15px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      text-transform: uppercase;
+      position: relative;
+    }
+    
+    &--white {
+      background-color: $color-white;
+      color: $color-grey;
+    }
+    
+    &--animated {
+      animation: moveInBottom 1s ease-in 0.5s;
+      animation-fill-mode: backwards;
+    }
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rbga(0, 0, 0, 0.2);
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        box-shadow: 0 5px 20px rbga(0, 0, 0, 0.2);
+        opacity: 0;
+      }
+    }
+    
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rbga(0, 0, 0, 0.2);
+      outline: none;
+    }
+    
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-white;
+      border-radius: 100px;
+      z-index: -1;
+      transition: all, 0.3s;
+    }
+    &--blue {
+      background-color: $medium-blue;
+      color: $color-white;
+      &::after {
+        background-color: $medium-blue;
+      }
+    }
+}
+
+
+
+.btn-text{
+  &:link,
+  &:visited {
+    color: $medium-blue;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $medium-blue;
+    padding: .4rem;
+    font-size: $default-font-size;
+  }
+  &:hover {
+    background-color: $medium-blue;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.15);
+    transform: translate(-0.2rem);
+  }
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
+  }
+  transition: all 0.2s;
+}
